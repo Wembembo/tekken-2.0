@@ -1,13 +1,188 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  max-width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-image: linear-gradient(to bottom right, #224e5b, #01050d);
+  height: auto;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ironFist;
+  src: url(/Styles/Iron-Fist.ttf);
+}
+
+.Dropdown {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  background-color: #dd1d5b;
+  color: white;
+}
+
+h2 {
+  background-color: #dd1d5b;
+  color: white;
+  display: inline-block;
+}
+
+.header {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: large;
+  color: #9b9999f8;
+}
+
+.Footer{
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: large;
+    color: #9b9999f8;
+  }
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
+}
+
+#toDoList {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 100;
+  font-size: large;
+  margin: 10px;
+}
+
+#Nav {
+  background-color: #dd1d5b;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 100;
+  font-size: large;
+  margin: 10px;
+}
+
+#help {
+  color: #9a9b9c;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.notation {
+  height: 30px;
+  font-family: ironFist;
+  font-size: 30px;
+  color: aliceblue;
+}
+
+.dataContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 50px;
+}
+
+#playerOneContainer,
+#playerTwoContainer {
+  flex: 1;
+  min-width: 45%;
+  max-width: 50%;
+}
+
+#videoDiv{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+table {
+  background-color: #c8acd6;
+}
+
+th {
+  text-align: center;
+  color: #d4d4d6;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #857bde;
+}
+
+tr:nth-child(odd) {
+  background-color: #221e45;
+  color: #b4b4b4;
+}
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 768px) {
+  .notation {
+    font-size: 1rem;
+  }
+  .dataContainer {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 717px) {
+  .notation {
+    font-size: 0.9rem;
+  }
+  img{
+    height: 50%;
+  }
+  .dataContainer{
+    padding: 0;
+    size: 1rem;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #playerTwoSelection{
+    display: none;
+  }
+  #playerTwoContainer{
+    display: none;
+  }
+  #videoContainer{
+    display: none;
+  }
+  #videoButton{
+    display: none;
+  }
+}
+
+@media (max-width: 450px){
+  .dataContainer{
+    max-width: 100%;
+    padding: 0px;
+    display: flex;
+    justify-content: flex-start;
+  }
 }
